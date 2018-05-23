@@ -3,12 +3,12 @@
 |Colum|Type|Options|
 |-----|----|-------|
 |name |string  | null: false
-|address|string| null: false
+|email|string| null: false
 
 
 ## Association
 - has_many :messages
-- has_many :groups, throught: :members
+- has_many :groups, through: :members
 - has_many :members
 
 
