@@ -1,6 +1,152 @@
-.p{
-  background-color: red;
-  width: 300px;
-  height: 400px;
+.notification{
+  height: 20px;
+  background-color: #38AEF0;
+  text-align: center;
+  color: white;
 }
-
+.mainspace{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: right;
+  .header{
+    height: 15vh;
+    border: 1px solid #eee;
+    overflow: hidden;
+    .content{
+      margin: 0 40px;
+      &__group{
+        font-size:20px;
+        color:#333333;
+        float: left;
+        margin: 35px 0 15px;
+      }
+      &__edit{
+        color: #38AEF0;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+        border: 1px solid #38AEF0;
+        float: right;
+      }
+         }
+    .content2{
+      margin: 0 40px;
+      font-size:12px;
+      clear: both;
+      &__member{
+        color:#999999;
+      }
+    }
+  }
+  .body{
+    height: calc(100vh - 15vh - 90px);
+    overflow: hidden;
+      .content{
+        height: 100vh;
+        margin:0 40px ;
+          .chat{
+            padding-top: 46px;
+            padding-bottom:40px;
+            &__memmber{
+              font-size: 16px;
+              color: #434A54;
+              font-weight: bold;
+              padding-bottom: 10px;
+              float: left;
+              &--time{
+                   font-size: 12px;
+                   flaot: left;
+              }
+            }
+            &__message{
+              font-size: 14px;
+              color: #434A54;
+              clear: both;
+            }
+          }
+    }
+  }
+  .footer{
+    height: 50px;
+    padding:20px 50px 20px 40px;
+    background-color:#dddddd;
+    .messageform{
+      border: none;
+      box-sizing: border-box;
+      float: left;
+      height: 50px;
+      padding: 0 10px;
+      width: calc(100% - 150px);
+    }
+    .form_mask{
+      background-color: #fff;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      padding:40px 0 0 0 0;
+      .icon{
+        line-height:50px;
+      }
+    }
+    .send-button {
+      background-color:#38AEF0;
+      border: none;
+      color: #fff;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}
+.side-bar{
+  height: 100vh;
+  width: 300px;
+  float: left;
+    .user{
+      height: 15vh;
+      background-color: black;
+      overflow: hidden;
+        .content{
+          height: 50px;
+          margin: 25px 0;
+          display: flex;
+          align-items: center;
+          &__name{
+            color: #FFFFFF;
+            padding-left: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 50px;
+          }
+          &__create{
+            font-size: 16px;
+            padding-left: 160px;
+               a{
+                color: white;
+              }
+          }
+        }
+  }
+    .groups{
+      background-color: #2f3e51;
+      height: calc(100vh - 15vh);
+      overflow: hidden;
+        .content{
+          margin: 20px 20px 40px 20px;
+          overflow: hidden;
+            .group{
+              &__name{
+                font-size:15px;
+                color: #FFFFFF;
+                padding: 20px 0 5px 0;
+              }
+              &__message{
+                font-size: 11px;
+                color: #FFFFFF;
+              }
+           }
+        }
+    }
+}
