@@ -12,7 +12,7 @@
     height: 15vh;
     border: 1px solid #eee;
     overflow: hidden;
-    .content{
+    .groups{
       margin: 0 40px;
       &__group{
         font-size:20px;
@@ -29,7 +29,7 @@
         float: right;
       }
          }
-    .content2{
+    .members{
       margin: 0 40px;
       font-size:12px;
       clear: both;
@@ -41,7 +41,7 @@
   .body{
     height: calc(100vh - 15vh - 90px);
     overflow: hidden;
-      .content{
+      .messages{
         height: 100vh;
         margin:0 40px ;
           .chat{
@@ -133,7 +133,7 @@
       background-color: #2f3e51;
       height: calc(100vh - 15vh);
       overflow: hidden;
-        .content{
+        .list{
           margin: 20px 20px 40px 20px;
           overflow: hidden;
             .group{

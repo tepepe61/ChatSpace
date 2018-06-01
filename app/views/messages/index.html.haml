@@ -2,16 +2,16 @@
   アカウント登録完了しました
 .mainspace
   .header
-    .content
-      .content__group
+    .groups
+      .groups__group
         %p シス単
-      .content__edit
+      .groups__edit
         Edit
-    .content2
-      .content2__member
+    .members
+      .members__member
         %p MEMBER: isikawa
   .body
-    .content
+    .messages
       %ul.chat
         %li.chat__memmber
           isikawa
@@ -27,22 +27,4 @@
           %i.fa.fa-picture-o.fa-lg
         %input{style: "display:none", type: "file", class: "imageform", id: "photos"}
       %input{type: "submit", value: "Send", class: "send-button"}
-
-
-.side-bar
-  .user
-    .content
-      .content__name
-        %p isikawa
-      .content__create
-        =link_to 'https://www.google.co.jp/' do
-          %i.fa.fa-pencil-square-o
-        =link_to 'https://www.google.co.jp/' do
-          %i.fa.fa-cog.icon
-  .groups
-    .content
-      .group
-        .group__name
-          シス単
-        .group__message
-          a
+= render partial: 'sidebar'

@@ -1,0 +1,29 @@
+
+  .footer
+    .content
+    %form{action:""}
+      .content__message
+        %input{type: "text", class: "messageform", placeholder: "type a message"}
+      .content__send
+        %input{type: "submit",value: "Send", class: "send-button"}
+
+
+
+ .footer{
+    height: 90px;
+      .content{
+        margin: 0 40px;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        &__message{
+          height: 50px;
+          padding: 20px 70px 20px 10px;
+        &__send{
+          background-color: #38AEF0;
+          height: 50px;
+          padding: 20px 70px 20px 10px;
+        }
+        }
+
+      }
