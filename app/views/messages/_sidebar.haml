@@ -4,14 +4,9 @@
       .content__name
         %p isikawa
       .content__create
-        =link_to 'https://www.google.co.jp/' do
+        =link_to '#' do
           %i.fa.fa-pencil-square-o
-        =link_to 'https://www.google.co.jp/' do
+        =link_to '#' do
           %i.fa.fa-cog.icon
   .groups
-    .list
-      .group
-        .group__name
-          シス単
-        .group__message
-          a
+    = render partial: 'group-list'
