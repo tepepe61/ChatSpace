@@ -1,2 +1,23 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+.notification
+  アカウント登録完了しました
+.mainspace
+  .header
+    .groups
+      .groups__group
+        %p シス単
+      .groups__edit
+        Edit
+    .members
+      .members__member
+        %p MEMBER: isikawa
+  .body
+    = render partial: 'message-chat'
+  .footer
+    %form{action: ""}
+      %input{type: "text", class: "messageform", placeholder: "type a message"}
+      .form_mask
+        %label{for: "photos",class: "icon"}
+          %i.fa.fa-picture-o.fa-lg
+        %input{style: "display:none", type: "file", class: "imageform", id: "photos"}
+      %input{type: "submit", value: "Send", class: "send-button"}
+= render partial: 'sidebar'
