@@ -40,7 +40,7 @@
   }
   .body{
     height: calc(100vh - 15vh - 90px);
-    overflow: hidden;
+    overflow: scroll;
       .messages{
         height: 100vh;
         margin:0 40px ;
@@ -125,6 +125,12 @@
           &__create{
             font-size: 16px;
             padding-left: 160px;
+               a{
+                color: white;
+              }
+          }
+          &__edit{
+            font-size: 16px;
                a{
                 color: white;
               }
