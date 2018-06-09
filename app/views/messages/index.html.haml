@@ -1,5 +1,3 @@
-.notification
-  アカウント登録完了しました
 .mainspace
   .header
     .groups
@@ -11,13 +9,22 @@
       .members__member
         %p MEMBER: isikawa
   .body
-    = render partial: 'message-chat'
+    .messages
+      = render @messages
   .footer
-    %form{action: ""}
-      %input{type: "text", class: "messageform", placeholder: "type a message"}
-      .form_mask
-        %label{for: "photos",class: "icon"}
-          %i.fa.fa-picture-o.fa-lg
-        %input{style: "display:none", type: "file", class: "imageform", id: "photos"}
-      %input{type: "submit", value: "Send", class: "send-button"}
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+    / %form{action: ""}
+    /   %input{type: "text", class: "messageform", placeholder: "type a message"}
+    /   .form_mask
+    /     %label{for: "photos",class: "icon"}
+    /       %i.fa.fa-picture-o.fa-lg
+    /     %input{style: "display:none", type: "file", class: "imageform", id: "photos"}
+    /   %input{type: "submit", value: "Send", class: "send-button"}
 = render partial: 'sidebar'

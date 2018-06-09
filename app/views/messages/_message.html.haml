@@ -1,0 +1,11 @@
+.chat
+  .chat__memmber
+    = message.user.name
+  .chat__memmber--time
+    = message.created_at
+  .chat__message
+    - if message.content.present?
+      %p.chat__message__content
+    = message.content
+    = image_tag message.image.url, class: 'chat__message__image' if message.image.present?
+
