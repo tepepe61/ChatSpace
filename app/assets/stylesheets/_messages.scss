@@ -40,7 +40,7 @@
   }
   .body{
     height: calc(100vh - 15vh - 90px);
-    overflow: hidden;
+    overflow: scroll;
       .messages{
         height: 100vh;
         margin:0 40px ;

@@ -2,9 +2,10 @@
   .header
     .groups
       .groups__group
-        %p シス単
+        = @group.name
       .groups__edit
-        Edit
+        =link_to edit_group_path(current_user) do
+          EDIT
     .members
       .members__member
         %p MEMBER: isikawa
