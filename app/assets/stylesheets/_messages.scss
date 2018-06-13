@@ -1,9 +1,9 @@
-.notification{
-  height: 20px;
-  background-color: $chatspace-blue;
-  text-align: center;
-  color: white;
-}
+// .notification{
+//   height: 20px;
+//   background-color: $chatspace-blue;
+//   text-align: center;
+//   color: white;
+// }
 .mainspace{
   height: 100vh;
   width: calc(100vw - 300px);
@@ -27,6 +27,9 @@
         margin: 28px 20px 0;
         border: 1px solid $chatspace-blue;
         float: right;
+          a{
+            color: #38AEF0;
+          }
       }
          }
     .members{
@@ -90,7 +93,7 @@
         line-height:50px;
       }
     }
-    .send-button {
+    .form__submit {
       background-color:$chatspace-blue;
       border: none;
       color: #fff;
@@ -99,6 +102,9 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+    }
+    .hidden{
+      display: none;
     }
   }
 }
