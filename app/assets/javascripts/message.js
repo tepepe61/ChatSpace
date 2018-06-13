@@ -20,7 +20,10 @@ $(function(){
                 </div>`
                 return html;
     }
-  $(function(){
+  function scroll(){
+    $('.body').animate({scrollTop:$('.body')[0].scrollHeight},'slow');
+  }
+
     $('#new_message').on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
@@ -36,14 +39,12 @@ $(function(){
       .done(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);
-        $('.messageform').val('')
         $('.form__submit').prop('disabled', false);
         $('#new_message')[0].reset();
-        $('.body').animate({scrollTop:$('.body')[0].scrollHeight},'slow');
+        scroll();
        })
       .fail(function(){
        alert('error');
      })
     })
-  });
 });
