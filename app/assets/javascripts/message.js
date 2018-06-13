@@ -1,8 +1,7 @@
 $(function(){
   function buildHTML(message){
-    if (message.image){var image  = `<img src ="${message.image}">`;
-  } else{
-    var image = '';}
+    var image = '';
+    if (message.image){var image  = `<img src ="${message.image}">`; }
     var html = `<div class="chat">
                   <div class="chat__memmber">
                     ${message.name}
@@ -21,9 +20,6 @@ $(function(){
                 </div>`
                 return html;
     }
-    $(function() {
-    $('.chat')
-   });
   $(function(){
     $('#new_message').on('submit', function(e){
       e.preventDefault();
