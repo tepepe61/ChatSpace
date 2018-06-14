@@ -46,17 +46,15 @@ $(function(){
       }
     })
     .fail(function(){
-      alert('失敗だよー')
+      alert('ユーザー検索に失敗しました')
     })
   });
 
   $("#user-search-result").on('click',".chat-group-user__btn--add",function(){
     var user_id = $(this).attr('data-user-id');
     var user_name = $(this).attr('data-user-name');
-    appendUserResult(user_id, user_name);
-
-  $(".chat-group-user__btn--add").parent().remove();
-
+      appendUserResult(user_id, user_name);
+  $(this).parent().remove();
   })
   $("#chat-group-users").on("click", ".chat-group-user__btn--remove", function(){
     $(this).parent().remove();
