@@ -38,7 +38,7 @@ $(function(){
       })
       .done(function(data){
         var html = buildHTML(data);
-        if (data.length !== 0){
+        if (data.length ! == 0){
         $('.messages').append(html);
         $('.form__submit').prop('disabled', false);
         $('#new_message')[0].reset();
@@ -59,7 +59,6 @@ $(function(){
         dataType:  'json',
       })
       .done(function(json){
-        console.log(json)
         var inHTML = '';
         json.forEach(function(message){
           if(message.id > message_id){
