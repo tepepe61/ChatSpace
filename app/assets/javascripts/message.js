@@ -38,17 +38,19 @@ $(function(){
       })
       .done(function(data){
         var html = buildHTML(data);
+        if (data.length !== 0){
         $('.messages').append(html);
         $('.form__submit').prop('disabled', false);
         $('#new_message')[0].reset();
         scroll();
+        }
        })
       .fail(function(){
        alert('error');
      })
     })
 
-  interval = setInterval(function(){
+  setInterval(function(){
     if (location.pathname.match(/\/groups\/\d+\/messages/)){
       var message_id = $('.chat').last().data('message-id');
       $.ajax({
@@ -57,6 +59,7 @@ $(function(){
         dataType:  'json',
       })
       .done(function(json){
+        console.log(json)
         var inHTML = '';
         json.forEach(function(message){
           if(message.id > message_id){
@@ -67,8 +70,8 @@ $(function(){
         scroll();
       })
       .fail(function(data){
-        alert('自動更新失敗です')
-      });
-    };
+        alert('自動更新失敗です');
+      })
+    }
   } , 5000);
 });
