@@ -5,8 +5,8 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     respond_to do |format|
+      format.json{ @auto_messages = @messages.where(' id > ?', params[:id])}
       format.html
-      format.json{ @auto_messages = @messages.where("id > ?", params[:id])}
     end
   end
 
