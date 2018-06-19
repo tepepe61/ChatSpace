@@ -55,7 +55,7 @@ $(function(){
       var message_id = $('.chat').last().data('message-id');
       $.ajax({
         url:       location.href,
-        data:      { id: message_id},
+        data:      { id: message_id },
         dataType:  'json',
       })
       .done(function(json){
