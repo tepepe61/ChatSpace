@@ -60,9 +60,9 @@ $(function(){
       })
       .done(function(json){
         var inHTML = '';
-        json.forEach(function(message){
-        inHTML += buildHTML(message);
-        });
+          json.forEach(function(message){
+          inHTML += buildHTML(message);
+          });
         $('.messages').append(inHTML);
         scroll();
       })

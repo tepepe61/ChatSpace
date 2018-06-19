@@ -1,4 +1,4 @@
-json.array!        @auto_messages do |message|
+json.array! @auto_messages do |message|
   json.content         message.content
   json.image           message.image.url
   json.name            message.user.name
